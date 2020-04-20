@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-on-heroku';
+
+  constructor(private authService: AuthService) {}
+
+  title = 'frontend';
+
+  loggedIn(){
+    const flag = this.authService.loggedIn();
+    console.log(flag);
+    
+    return flag
+  }
+
+  logout(){
+    this.authService.logout();
+  }
+
 }
