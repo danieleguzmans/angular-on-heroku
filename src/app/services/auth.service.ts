@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  private URL = 'https://sign-in-app-daniel.herokuapp.com/api';
+  private URL = 'https://login-daxxn.herokuapp.com/api';
   constructor(private http: HttpClient, private router: Router) { }
 
   signUpUser(user) {
